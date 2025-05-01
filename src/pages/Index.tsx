@@ -1,12 +1,9 @@
 
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
-    // Redirect to the token create page
+    // Direct link to the static HTML file
     window.location.href = '/token/create-coin.html';
   }, []);
 
