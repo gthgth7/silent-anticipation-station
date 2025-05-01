@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/create-coin",
+      "destination": "/create-coin.html"
+    },
+    {
+      "source": "/liquidity",
+      "destination": "/liquidity.html"
+    },
+    {
+      "source": "/trending",
+      "destination": "/trending.html"
+    },
+    {
+      "source": "/",
+      "destination": "/trending.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/trending.html"
+    }
+  ]
+}
