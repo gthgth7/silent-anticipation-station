@@ -1,6 +1,12 @@
 
-// This file exists to support the build process
-// The actual content is served from the static HTML in index.html
-console.log("Application is using static HTML file with token assets");
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-// No need to mount React app since we're using the static HTML directly
+// Mount the React app to display our routing
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
