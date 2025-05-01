@@ -14,6 +14,7 @@ export default defineConfig({
   // Serve static files from the token directory
   publicDir: 'public',
   server: {
+    port: 8080,
     fs: {
       // Allow serving files from one level up to the project root
       allow: ['..']
