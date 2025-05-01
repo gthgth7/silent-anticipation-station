@@ -1,14 +1,14 @@
 
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
-    // Redirect to the token creation page
-    window.location.href = "/token/create-coin.html";
+    // Use a more reliable way to redirect - using window.location.replace
+    // And make sure we're using the proper path
+    const path = `${window.location.origin}/token/create-coin.html`;
+    console.log("Redirecting to:", path);
+    window.location.replace(path);
   }, []);
 
   // This content will briefly appear before the redirect happens
@@ -20,7 +20,10 @@ const Index = () => {
         <Button 
           size="lg" 
           className="bg-indigo-600 hover:bg-indigo-700"
-          onClick={() => window.location.href = "/token/create-coin.html"}
+          onClick={() => {
+            const path = `${window.location.origin}/token/create-coin.html`;
+            window.location.replace(path);
+          }}
         >
           Launch App
         </Button>
